@@ -1,0 +1,49 @@
+{
+    "data": [
+        {
+            "name": "but",
+            "price": "8",
+            "code": "4291"
+        },
+        {
+            "name": "but",
+            "price": "4000",
+            "code": "4291484813934"
+        },
+        {
+            "name": "ngoi but",
+            "price": "7000",
+            "code": "6952546990885"
+        },
+        {
+            "name": "tay",
+            "price": "6000",
+            "code": "6921734930453"
+        },
+        {
+            "name": "pencil",
+            "price": "5000",
+            "code": "6920139813798"
+        },
+        {
+            "name": "ChocoPie",
+            "price": "4000",
+            "code": "8936036020403"
+        },
+        {
+            "name": "Cosy",
+            "price": "5000",
+            "code": "8934680113823"
+        },
+        {
+            "name": "Cola",
+            "price": "8000",
+            "code": "8935049840732"
+        },
+        {
+            "name": "Mobilitlle",
+            "price": "15000",
+            "code": "8938511167054"
+        }
+    ]
+}

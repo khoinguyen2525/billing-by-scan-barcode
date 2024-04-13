@@ -1,33 +1,7 @@
 import cv2
 from pyzbar.pyzbar import decode
 import json
-from difflib import get_close_matches
 import time
-import pyttsx3
-import speech_recognition as sr
-import datetime
-
-friday = pyttsx3.init()
-voice = friday.getProperty("voices")
-friday.setProperty("voice", voice[1].id)
-
-
-def speak(audio):
-    print("EDEN: " + audio)
-    friday.say(audio)
-    friday.runAndWait()
-
-
-def welcome():
-    hour = datetime.datetime.now().hour
-    if hour >= 6 and hour < 12:
-        speak("good moring sir")
-    elif hour >= 12 and hour < 18:
-        speak("good afternoon sir")
-    else:
-        speak("good night sir")
-    speak("how can i help you ?")
-
 
 def billing():
     scanned_items = []
@@ -85,5 +59,4 @@ def billing():
 
 
 if __name__ == "__main__":
-
     billing()

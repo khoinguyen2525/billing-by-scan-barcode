@@ -1,7 +1,6 @@
 import cv2
 from pyzbar.pyzbar import decode
 import json
-from difflib import get_close_matches
 import time
 
 data_list = {"data": []}
@@ -10,24 +9,18 @@ data_list = {"data": []}
 def read_code(image_path):
     # Read the image
     image = cv2.imread(image_path)
-
     # Convert the image to grayscale
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
     # Decode QR codes
     qr_codes = decode(gray)
-
     # Process QR code data
-
     for qr_code in qr_codes:
         data = qr_code.data.decode("utf-8")
         ten = str(input("nhap ten: "))
         gia = str(input("nhap gia sp: "))
         datas = [data, ten, gia]
         data_list.append(datas)
-
     return data_list
-
 
 def scan_code():
     cap = cv2.VideoCapture(0)
@@ -120,16 +113,4 @@ def save_data_list():
 
 
 if __name__ == "__main__":
-    # Specify the path to the image containing the QR code
-    image_path = "D:\scan QR code\barcodes\QR_pen.JPG"
-
-    # Specify the output JSON file
-    json_file = "data.json"
-
-    # Read QR code and get data
-    # qr_data_list = read_code(image_path)
-
-    # Save data to JSON file
-    # save_data_list(qr_data_list, json_file)
-
-    scan_code()
+   scan_code()
